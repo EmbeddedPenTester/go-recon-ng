@@ -63,7 +63,7 @@ type Port struct {
 	Protocol string `json:"protocol"`
 	Host string `json:"hostname"`
 	IPv4 string `json:"ip_address"`
-	Port int    `json:"port"`
+	Port string    `json:"port"`
 }
 // Parse recon-ng json data
 func Parse(content []byte) (*Results, error) {
