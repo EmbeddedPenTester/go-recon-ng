@@ -59,7 +59,7 @@ type Host struct {
 	IPAddress string `json:"ip_address"`
 }
 
-typedef Port struct {
+type Port struct {
 	Protocol string `json:"protocol"`
 	Host string `json:"hostname"`
 	IPv4 string `json:"ip_address"`
