@@ -9,6 +9,7 @@ type Results struct {
 	Domains     []Domain     `json:"domains"`
 	Credentials []Credential `json:"credentials"`
 	Hosts       []Host       `json:"hosts"`
+	Ports       []Port       `json:"ports"`
 }
 
 // Contact information
@@ -58,6 +59,12 @@ type Host struct {
 	IPAddress string `json:"ip_address"`
 }
 
+typedef Port struct {
+	Protocol string `json:"protocol"`
+	Host string `json:"hostname"`
+	IPv4 string `json:"ip_address"`
+	Port int    `json:"port"`
+}
 // Parse recon-ng json data
 func Parse(content []byte) (*Results, error) {
 	r := &Results{}
